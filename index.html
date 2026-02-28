@@ -1,14 +1,171 @@
-<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hello World</title>
-  <link href='/style.css' rel='stylesheet'>
-</head>
-<body>
-  <h1>Hello, world!</h1>
-  <button onclick="console.log('hello');">Press me</button>
-  <script defer type="text/javascript" src="/main.js"></script>
-</body>
+   <head>
+       <meta charset="UTF-8">
+       <script type="text/javascript" data-lets-plot-script="library" src="https://cdn.jsdelivr.net/gh/JetBrains/lets-plot@v4.5.1/js-package/distr/lets-plot.min.js"></script>
+   </head>
+   <body>
+          <div id="JlEzSQ"></div>
+   <script type="text/javascript" data-lets-plot-script="plot">
+   
+   (function() {
+   // ----------
+   
+   var containerDiv = document.getElementById("JlEzSQ");
+   var observer = new ResizeObserver(function(entries) {
+       for (let entry of entries) {
+           var width = containerDiv.clientWidth
+           if (entry.contentBoxSize && width > 0) {
+           
+               // Render plot
+               if (observer) {
+                   observer.disconnect();
+                   observer = null;
+               }
+
+               var plotSpec={
+"mapping":{
+},
+"data_meta":{
+},
+"ggtitle":{
+"text":"Alunmi Network based on ML Recommendation",
+"subtitle":"Estimated using cosine similarity with Students-Skill Matrix"
+},
+"theme":{
+"name":"classic",
+"line":"blank",
+"axis":"blank",
+"legend_position":"top"
+},
+"ggsize":{
+"width":1200.0,
+"height":1200.0
+},
+"kind":"plot",
+"scales":[{
+"name":"Cosine Similarity",
+"aesthetic":"color",
+"breaks":[0.0,0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1.0],
+"limits":[0.0,1.0],
+"scale_mapper_kind":"color_cmap"
+}],
+"layers":[{
+"geom":"segment",
+"data":{
+"u":["Ai Chin","Ai Chin","Ai Chin","Ai Chin","Caen","Caen","Caen","Caen","Daniel","Emily","Emily","Emma","Isabella","John","Leonard","Maxine","Maxine","Olivia","Sarah","Sarah","Sophia"],
+"v":["Caen","John","Michael","Yi Huei","John","Michael","Sophia","Yi Huei","Pei","Leonard","Marc","Leo","Leo","Michael","Marc","Olivia","Zhenru","Zhenru","Sophia","Yi Huei","Yi Huei"],
+"weight":[0.5,0.5,0.5,0.25,0.25,0.25,0.25,0.25,0.6666666666666669,0.3333333333333334,0.3333333333333334,0.3333333333333334,0.3333333333333334,0.5,0.6666666666666669,0.6666666666666669,0.3333333333333334,0.3333333333333334,0.2886751345948129,0.5773502691896258,0.25],
+"x":[0.21830992983937691,0.21830992983937691,0.21830992983937691,0.21830992983937691,0.2704496059462346,0.2704496059462346,0.2704496059462346,0.2704496059462346,-0.2694786171878216,0.9239898182917344,0.9239898182917344,-0.6118479903603552,-0.6410068757389822,0.13669511631630826,0.7993964325646781,-0.6053168021841643,-0.6053168021841643,-0.5367431683257552,0.5019311785255735,0.5019311785255735,0.4353694077197525],
+"y":[0.4289202881875553,0.4289202881875553,0.4289202881875553,0.4289202881875553,0.37284510315556657,0.37284510315556657,0.37284510315556657,0.37284510315556657,-0.8724002635766049,-0.2778214041003008,-0.2778214041003008,0.6306365328717866,0.556507222326105,0.37939061730823137,-0.24422146310260728,-0.45249913625282134,-0.45249913625282134,-0.4890418325444475,0.45210974709987695,0.45210974709987695,0.35165887082120273],
+"xend":[0.2704496059462346,0.13669511631630826,0.1396483326428836,0.387020473328533,0.13669511631630826,0.1396483326428836,0.4353694077197525,0.387020473328533,-0.29961833233682356,0.7993964325646781,0.866809630342623,-0.5639882385182097,-0.5639882385182097,0.1396483326428836,0.866809630342623,-0.5367431683257552,-0.5071356064032564,-0.5071356064032564,0.4353694077197525,0.387020473328533,0.387020473328533],
+"yend":[0.37284510315556657,0.37939061730823137,0.4607445180851166,0.43851750023633657,0.37939061730823137,0.4607445180851166,0.35165887082120273,0.43851750023633657,-0.9567095159390735,-0.24422146310260728,-0.19814320354519138,0.6737556411585526,0.6737556411585526,0.4607445180851166,-0.19814320354519138,-0.4890418325444475,-0.387571110793974,-0.387571110793974,0.35165887082120273,0.43851750023633657,0.43851750023633657]
+},
+"mapping":{
+"x":"x",
+"y":"y",
+"xend":"xend",
+"yend":"yend",
+"color":"weight"
+},
+"tooltips":{
+"formats":[],
+"lines":["@u & @v","similarity = @weight"]
+},
+"data_meta":{
+"series_annotations":[{
+"type":"str",
+"column":"u"
+},{
+"type":"str",
+"column":"v"
+},{
+"type":"float",
+"column":"weight"
+},{
+"type":"float",
+"column":"x"
+},{
+"type":"float",
+"column":"y"
+},{
+"type":"float",
+"column":"xend"
+},{
+"type":"float",
+"column":"yend"
+}]
+},
+"size":2.0
+},{
+"geom":"label",
+"data":{
+"name":["Ai Chin","Caen","Charlotte","Daniel","Emily","Emma","Gordon","Isabella","James","John","Leo","Leonard","Marc","Mark","Maxine","Michael","Olivia","Pei","Sarah","Sophia","William","Yi Huei","Zhenru"],
+"x":[0.21830992983937691,0.2704496059462346,0.14402916625771275,-0.2694786171878216,0.9239898182917344,-0.6118479903603552,-1.0,-0.6410068757389822,0.3653783955312718,0.13669511631630826,-0.5639882385182097,0.7993964325646781,0.866809630342623,-0.8955407295301316,-0.6053168021841643,0.1396483326428836,-0.5367431683257552,-0.29961833233682356,0.5019311785255735,0.4353694077197525,0.7416488732788176,0.387020473328533,-0.5071356064032564],
+"y":[0.4289202881875553,0.37284510315556657,-0.9781620173302255,-0.8724002635766049,-0.2778214041003008,0.6306365328717866,0.20716219757481233,0.556507222326105,0.8339366625947878,0.37939061730823137,0.6737556411585526,-0.24422146310260728,-0.19814320354519138,-0.35294214740068136,-0.45249913625282134,0.4607445180851166,-0.4890418325444475,-0.9567095159390735,0.45210974709987695,0.35165887082120273,-0.5766728068340038,0.43851750023633657,-0.387571110793974]
+},
+"mapping":{
+"x":"x",
+"y":"y",
+"label":"name"
+},
+"position":{
+"name":"dodge"
+},
+"data_meta":{
+"series_annotations":[{
+"type":"str",
+"column":"name"
+},{
+"type":"float",
+"column":"x"
+},{
+"type":"float",
+"column":"y"
+}]
+}
+},{
+"geom":"text",
+"mapping":{
+},
+"data_meta":{
+},
+"label":"Prof. Roh’s Note:\n\nTeam, learning has just begun.\nDon’t be satisfied with a single analysis.\nBe curious, stay vigilant, and always look for ways to make it better.\n\nWhen you hover over the nodes in the network,\nyou’ll see similarity relationships between individuals.\nAs you can see, collaborative filtering using only a 2D matrix\noffers limited understanding.\n\nThe cosine similarity network delivers richer, more actionable insights—\nhelping you apply these concepts to real-world challenges,\nsuch as optimizing alumni engagement.\n\nNothing is impossible—Keep learning, Team DDDM.\n\nFrom the 🐐 with ❤️",
+"x":0.0,
+"y":-0.02,
+"color":"#00505c",
+"angle":0.0,
+"data":{
+}
+}],
+"metainfo_list":[],
+"spec_id":"71"
+};
+       
+               var toolbar = null;
+               var plotContainer = containerDiv;               
+               
+               var options = {
+                   sizing: {
+                       width_mode: "min",
+                       height_mode: "scaled",
+                       width: width
+                   }
+               };
+               var fig = LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer, options);
+               if (toolbar) {
+                 toolbar.bind(fig);
+               }
+               
+               break;
+           }
+       }
+   });
+   
+   observer.observe(containerDiv);
+   
+   // ----------
+   })();
+   
+   </script>
+   </body>
 </html>
